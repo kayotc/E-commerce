@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url(../assets/backpurple.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    transition: background 0.4s linear;
+}
+
+body.dark {
+    background-image: url(../assets/darkmode.png);
+    
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    transition: background 0.4s linear;
+}
+
+.checkbox{
+    opacity: 0;
+    position: relative;
+    display: grid;
+}
+.dark-mode-switch {
+   position: static;
+   left: 90%;
+}
+.label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor:pointer;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    height: 25px;
+    width: 50px;
+    left: 1200px;
+
+    transform: scale(1.5);
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    height: 22px;
+    width: 22px;
+
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(24px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+
+    color: #f39c12;
+}
+
+body .dark-mode-switch {
+    position: absolute;
+    margin-top: 170px;
+}
+
+header nav {
+    background-color: #202020b6;
+    padding: 10px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px
+}
+
+header .logo img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    margin-left: -40px;
+    display: flex;
+
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+header nav li {
+    margin-left: 15px;
+}
+
+header nav li a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 15px;
+    transition: 0.4s;
+    color: rgb(245, 245, 245);
+}
+
+header nav li a:hover {
+    color: #202020;
+    border: solid rgba(153, 112, 112, 0.192) 0px;
+    border-radius: 15px;
+    background-color: rgb(135, 16, 204);
+}
+
+.banner {
+    background-image: url(images/banner.jpg);
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+main {
+    flex: 1;
+    padding: 30px;
+}
+
+main h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: white;
+    margin-top: -330px;
+    display: flex;
+    padding: 50px;
+}
+
+main .separados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    background-color: black;
+    max-width: 300px;
+    box-shadow: 0.4s;
+    transition: 0.4s;
+    margin-left: 50px;
+}
+
+.profile:hover {
+    transform: translatey(-8px);
+    box-shadow: 0px 0px 60px rgb(21, 141, 174);
+}
+
+.profile img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.profile .texto {
+    text-align: center;
+    padding: 15px;
+}
+
+.profile h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(214, 214, 214);
+}
+
+.profile p {
+    font-size: 16px;
+    color: rgb(154, 154, 154);
+}
+
+main .separados .links {
+    text-decoration: none;
+}
+
+#logado {
+    color: #d8d8d8;
+    font-size: 20px;
+}
+
+
